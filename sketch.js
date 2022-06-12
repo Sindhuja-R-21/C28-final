@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 var engine, world;
 var canvas, angle, tower, ground, cannon;
-
+var angle;
 
 
 
@@ -18,7 +18,7 @@ function setup() {
   canvas = createCanvas(1200,600);
   engine = Engine.create();
   world = engine.world;
-  angle = -PI / 4;
+  angle = PI / 4;
   ground = new Ground(0, height - 1, width * 2, 1);
   tower = new Tower(150, 350, 160, 310);
   cannon = new Cannon(180, 110, 110, 50, angle);
